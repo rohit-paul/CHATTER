@@ -3,9 +3,11 @@ var $messages = $('.messages-content'),
     i = 0;
 
 var myName = "";
+//var mypw = "";
 
 $(window).load(function() {
   myName = prompt("Enter your name");
+  //mypw = prompt("Enter your password");
   $messages.mCustomScrollbar();
 
   firebase.database().ref("messages").on("child_added", function (snapshot) {
